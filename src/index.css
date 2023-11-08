@@ -1,13 +1,49 @@
-body {
+/* CSS Reset */
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*border-box instead of default(content-box) to include border and padding in width*/
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.box {
+  width: 450px;
+  margin: 40px;
+  border: 5px solid #333;
+}
+
+.avatar {
+  width: 100%;
+  /* use display to fix extra white space remaining  in bottom before border radius*/
+  display: flex;
+}
+.name {
+  margin-top: 5px;
+  /* display:flex used to align text vertically, without this align or justify center wont work*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro {
+  margin: 5px;
+}
+.skilllist {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  display: grid;
+  /* repeat 3 times columns of width 1fr*/
+  grid-template-columns: repeat(3, 1fr);
+  /* jump items to next line */
+  flex-wrap: wrap;
+  /* gap between items */
+  gap: 18px;
+}
+.skill {
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  /* display:flex used to align text vertically, without this align or justify center wont work*/
+  display: flex;
 }
